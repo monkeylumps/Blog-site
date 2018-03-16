@@ -8,15 +8,25 @@ import { Image } from '../Image';
   styleUrls: ['./carousel.component.css']
 })
 export class CarouselComponent implements OnInit {
-  images: Image = {
+  images: Image[] = [{
     id: 1,
     url: 'https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg',
     title: 'The beach'
-  };
+  },
+  {
+    id: 2,
+    url: 'https://static.pexels.com/photos/248797/pexels-photo-248797.jpeg',
+    title: 'The beach 2'
+  }];
+
+myVar = false;
 
 
-  constructor() { }
+  hide(myVar) {
+    myVar = true;
+  }
 
+  constructor() {}
   ngOnInit() {
   }
 

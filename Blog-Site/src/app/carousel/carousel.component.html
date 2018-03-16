@@ -1,6 +1,8 @@
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>{{images.title}}</mat-card-title>
-  </mat-card-header>
-  <img mat-card-image src={{images.url}}>
-</mat-card>
+<div *ngFor="let image of images;">
+  <mat-card *ngIf="myVar">
+    <mat-card-header>
+      <mat-card-title>{{image.title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src={{image.url}}>
+  </mat-card>
+</div>
